@@ -5,6 +5,7 @@ import ProtetctedRoutes from './Components/ProtectedRoutes/ProtetctedRoutes';
 import Dashboard from './Components/Dashboard/dashboard';
 import Layout from './Components/Layout/Layout';
 import { Navigate } from 'react-router-dom';
+import Todo from './Components/Todo/Todo';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/admin' element={<Layout />}>
             <Route index element={<Navigate to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="todo" element={<Todo />} />
           </Route>
         </Route>
       </Routes>
